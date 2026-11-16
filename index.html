@@ -2865,6 +2865,20 @@ themeToggle.addEventListener("change", () => {
         });
       }
 
+      // Mientras se realiza el desplazamiento suave iniciado desde el menú,
+      // se conserva seleccionado el elemento que el usuario pulsó.
+      let navegacionPorClick = false;
+      let temporizadorScroll = null;
+
+      window.addEventListener("scroll", () => {
+        if (!navegacionPorClick) return;
+
+        clearTimeout(temporizadorScroll);
+        temporizadorScroll = setTimeout(() => {
+          navegacionPorClick = false;
+        }, 180);
+      }, { passive: true });
+
       menuLinks.forEach(link => {
         link.addEventListener("click", event => {
           event.preventDefault();
@@ -2872,6 +2886,8 @@ themeToggle.addEventListener("change", () => {
           const section = document.getElementById(id);
           if (!section) return;
 
+          navegacionPorClick = true;
+          clearTimeout(temporizadorScroll);
           activarMenu(id);
           section.scrollIntoView({ behavior: "smooth", block: "start" });
 
@@ -2882,6 +2898,8 @@ themeToggle.addEventListener("change", () => {
 
       if ("IntersectionObserver" in window) {
         const observer = new IntersectionObserver(entries => {
+          if (navegacionPorClick) return;
+
           const visible = entries
             .filter(entry => entry.isIntersecting)
             .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
