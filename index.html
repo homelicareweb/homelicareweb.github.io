@@ -1736,6 +1736,17 @@ section[id] {
     border-bottom-color: var(--pink);
 }
 
+/* Mantener visible la X nativa del buscador en modo oscuro */
+:root[data-theme="dark"] .sf input[type="search"] {
+    color-scheme: light;
+}
+
+:root[data-theme="dark"] .sf input[type="search"]::-webkit-search-cancel-button {
+    opacity: 1;
+    filter: none;
+    cursor: pointer;
+}
+
     
     /* Agendamiento por pasos */
     .booking-form { gap: 14px; }
