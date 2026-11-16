@@ -1,0 +1,2933 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>HomeliCare | Salud a domicilio</title>
+
+  <!-- SEO -->
+<title>HomeliCare | Salud a Domicilio</title>
+
+<meta name="description"
+      content="En HomeliCare llevamos servicios de salud hasta tu hogar. Agenda tus estudios de laboratorio y recibe atención a domicilio.">
+
+<!-- Open Graph -->
+<!-- Open Graph / WhatsApp / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="HomeliCare | Salud a Domicilio">
+<meta property="og:description" content="Cuidamos de ti y de tu familia sin salir de casa. Servicios de salud a domicilio.">
+<meta property="og:image" content="https://www.homelicare.com/img/iconohomeli-mini.png">
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
+<meta property="og:url" content="https://www.homelicare.com/">
+<meta property="og:site_name" content="HomeliCare">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HomeliCare | Salud a Domicilio">
+<meta name="twitter:description" content="Salud y bienestar hasta la puerta de tu hogar.">
+<meta name="twitter:image" content="https://www.homelicare.com/img/iconohomeli-mini.png">
+
+<!-- Favicon -->
+<link rel="icon" href="img/favicon-homelicare.ico" type="image/x-icon">
+<link rel="apple-touch-icon" href="img/favicon-homelicare.png">
+
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root {
+      --navy: #0a2a7a;
+      --blue: #1d4fd6;
+      --pink: #f0147f;
+      --bg: #fff;
+      --ink: #0a2a7a;
+      --muted: #51607f;
+      --card: #fff;
+      --line: #e3e8f4;
+      --sp: #fdeef6;
+      --sb: #eaf1ff;
+      --hero: #0a2a7a;
+      color-scheme: light;
+      box-sizing: border-box;
+      padding-top: env(safe-area-inset-top, 0px);
+      padding-bottom: env(safe-area-inset-bottom, 0px)
+    }
+
+   .service-label {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    padding: 0;
+    border-radius: 0;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.3;
+    box-shadow: none;
+
+    /* Resplandor alrededor de las letras */
+    text-shadow:
+        0 0 3px #001747,
+        0 0 6px #001747,
+        0 0 10px rgba(0, 15, 65, 0.95),
+        0 0 18px rgba(0, 15, 65, 0.75);
+}
+
+    :root[data-theme="dark"] {
+      --bg: #0b1226;
+      --ink: #eaf0ff;
+      --muted: #a9b5d3;
+      --card: #121b36;
+      --line: #243056;
+      --sp: #2a1530;
+      --sb: #14224a;
+      --hero: #061a52;
+      color-scheme: dark
+    }
+
+    html {
+      scroll-padding-top: calc(env(safe-area-inset-top, 0px) + 70px);
+      scroll-behavior: smooth
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Poppins, system-ui, -apple-system, "Segoe UI", sans-serif;
+      line-height: 1.45
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0 0 auto;
+      height: env(safe-area-inset-top, 0px);
+      background: var(--bg);
+      z-index: 30
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    svg {
+      width: 1em;
+      height: 1em;
+      stroke: currentColor;
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex: none
+    }
+
+    .w {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 max(18px, env(safe-area-inset-right)) 0 max(18px, env(safe-area-inset-left))
+    }
+
+    header {
+      position: sticky;
+      top: env(safe-area-inset-top, 0px);
+      z-index: 20;
+      background: var(--bg);
+      border-bottom: 1px solid var(--line)
+    }
+
+    .hd {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      height: 68px
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 1.35rem;
+      line-height: 1
+    }
+
+    .logo small {
+      display: block;
+      font-weight: 500;
+      font-size: .62rem;
+      color: var(--blue)
+    }
+
+    .logo b {
+      color: var(--pink)
+    }
+
+    nav {
+      display: flex;
+      gap: 22px;
+      margin-left: auto;
+      font-weight: 500;
+      font-size: .92rem
+    }
+
+    nav a {
+      padding: 6px 0;
+      border-bottom: 2px solid transparent
+    }
+
+    nav a:hover,
+    nav a.on {
+      color: var(--pink);
+      border-color: var(--pink)
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 0;
+      border-radius: 999px;
+      background: var(--pink);
+      color: #fff;
+      font: 600 .95rem Poppins, sans-serif;
+      padding: 12px 22px;
+      cursor: pointer
+    }
+
+    .btn:focus-visible,
+    .ic:focus-visible,
+    input:focus-visible {
+      outline: 3px solid var(--blue);
+      outline-offset: 2px
+    }
+
+    .ic {
+      position: relative;
+      background: none;
+      border: 0;
+      color: var(--blue);
+      font-size: 1.6rem;
+      cursor: pointer;
+      padding: 6px;
+      display: flex
+    }
+
+    .theme-control {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--blue);
+      cursor: pointer;
+      user-select: none;
+      font-size: .78rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .theme-icon { font-size: 1.25rem; line-height: 1; }
+    .theme-switch { position: relative; display: inline-block; width: 42px; height: 24px; }
+    .theme-switch input { position: absolute; opacity: 0; width: 1px; height: 1px; }
+    .theme-switch i { position: absolute; inset: 0; border-radius: 99px; background: #cbd5e1; transition: .2s; }
+    .theme-switch i::before { content: ""; position: absolute; width: 18px; height: 18px; left: 3px; top: 3px; border-radius: 50%; background: white; box-shadow: 0 1px 3px #0003; transition: .2s; }
+    .theme-switch input:checked + i { background: var(--blue); }
+    .theme-switch input:checked + i::before { transform: translateX(18px); }
+    .theme-switch input:focus-visible + i { outline: 3px solid var(--pink); outline-offset: 2px; }
+
+    .search-clear {
+      border: 0; background: transparent; color: #64748b; cursor: pointer;
+      width: 32px; height: 32px; flex: none; border-radius: 50%;
+      font: 600 1.45rem/1 system-ui; display: grid; place-items: center;
+    }
+    .search-clear:hover { background: #e8edf6; color: #0a2a7a; }
+    .search-clear[hidden] { display: none !important; }
+
+    .badge {
+      position: absolute;
+      top: -2px;
+      right: -4px;
+      background: var(--pink);
+      color: #fff;
+      font: 700 .68rem Poppins;
+      border-radius: 99px;
+      min-width: 18px;
+      height: 18px;
+      display: grid;
+      place-items: center
+    }
+
+    .hero {
+      background-color: var(--hero);
+      background-image: url("img/homelicare-hero.webp");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      color: #fff;
+      padding: 44px 0 34px;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      backdrop-filter: blur(2.5px) saturate(.92);
+      -webkit-backdrop-filter: blur(2.5px) saturate(.92);
+      background: rgba(4, 20, 68, .08);
+    }
+
+    .hero .w {
+      display: grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 28px;
+      align-items: center
+    }
+
+    h1 {
+      font-size: clamp(2rem, 5.4vw, 3.4rem);
+      line-height: 1.08;
+      margin: 0 0 14px;
+      font-weight: 800
+    }
+
+    h1 em {
+      font-style: normal;
+      color: #ff3d9a
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      margin: 0 0 20px;
+      max-width: 34rem
+    }
+
+    .hero p b {
+      color: #6cc3ff
+    }
+
+    .sb {
+      position: relative;
+      max-width: 560px
+    }
+
+    .sf {
+      display: flex;
+      background: #fff;
+      border-radius: 999px;
+      padding: 5px;
+      align-items: center;
+      gap: 8px;
+      color: #51607f
+    }
+
+    .sf svg {
+      margin-left: 12px;
+      font-size: 1.3rem
+    }
+
+    .sf input {
+      flex: 1;
+      min-width: 0;
+      border: 0;
+      font: 500 1rem Poppins, sans-serif;
+      color: #0a2a7a;
+      background: none;
+      padding: 10px 4px;
+    }
+
+    .sf input:focus-visible {
+      outline: 0
+    }
+
+    .sf:focus-within {
+      box-shadow: 0 0 0 3px #6cc3ff
+    }
+
+    .res {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: calc(100% + 8px);
+      background: var(--card);
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 12px 30px #0003;
+      overflow: hidden;
+      z-index: 25;
+      max-height: min(330px, 55vh);
+      overflow-y: auto
+    }
+
+    .res[hidden] {
+      display: none
+    }
+
+    .res .study-option {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 10px;
+      padding: 12px 16px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: transparent;
+      color: var(--ink);
+      font: 500 .92rem Poppins, sans-serif;
+      text-align: left;
+      cursor: pointer;
+      white-space: normal
+    }
+
+    .res .study-option:last-child {
+      border-bottom: 0
+    }
+
+    .res .study-option:hover,
+    .res .study-option:focus {
+      background: var(--sb);
+      outline: 0
+    }
+
+    .res .study-option.on {
+      background: var(--sp);
+      color: var(--pink)
+    }
+
+    .res .study-option .study-check {
+      margin-left: auto;
+      color: var(--pink);
+      font-weight: 800
+    }
+
+    .res .res-message {
+      padding: 13px 16px;
+      font-size: .88rem;
+      color: var(--muted)
+    }
+
+    .chips {
+      display: flex;
+      gap: 18px;
+      margin-top: 24px;
+      flex-wrap: wrap
+    }
+
+    .chip {
+      display: grid;
+      justify-items: center;
+      gap: 8px;
+      font-size: .78rem;
+      font-weight: 600;
+      text-align: center;
+      width: 92px
+    }
+
+    .chip i {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: #fff;
+      color: var(--pink);
+      display: grid;
+      place-items: center;
+      font-size: 1.9rem
+    }
+
+    .chip:nth-child(even) i {
+      color: var(--blue)
+    }
+
+    .trust {
+      background: #fff;
+      color: #0a2a7a;
+      border-radius: 22px;
+      padding: 8px 18px;
+      display: grid;
+      box-shadow: 0 10px 30px #0004
+    }
+
+    .trust div {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      padding: 11px 0;
+      font-size: .9rem;
+      font-weight: 500;
+      border-bottom: 1px solid #e3e8f4
+    }
+
+    .trust div:last-child {
+      border: 0
+    }
+
+    .trust svg {
+      color: var(--blue);
+      font-size: 1.5rem
+    }
+
+    .steps {
+      background: var(--sp);
+      border-radius: 26px;
+      margin: -1px 0 0;
+      padding: 22px 26px;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 18px;
+      align-items: center
+    }
+
+    .steps h2 {
+      margin: 0;
+      font-size: 1.5rem;
+      line-height: 1.15
+    }
+
+    .steps h2 span {
+      color: var(--pink)
+    }
+
+    .st3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px
+    }
+
+    .st {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: .85rem;
+      color: var(--muted)
+    }
+
+    .st b {
+      display: block;
+      color: var(--ink);
+      font-size: 1rem
+    }
+
+    .num {
+      flex: none;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--card);
+      display: grid;
+      place-items: center;
+      font-weight: 800;
+      font-size: 1.5rem;
+      color: var(--blue)
+    }
+
+    .st:nth-child(2) .num {
+      color: var(--pink)
+    }
+
+    section {
+      padding: 5px 0 6px
+    }
+
+    .sh {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: end;
+      gap: 6px 12px;
+      margin-bottom: 16px
+    }
+
+    h2.t {
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 800
+    }
+
+    .sh p {
+      margin: 2px 0 0;
+      color: var(--muted)
+    }
+
+    .sh a {
+      color: var(--blue);
+      font-weight: 600;
+      font-size: .9rem
+    }
+
+    .g4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px
+    }
+
+    /* Resultados: conservar el ancho de tarjeta aunque exista un solo estudio */
+    #searchResults {
+      grid-template-columns: repeat(auto-fill, minmax(min(100%, 230px), 1fr))
+    }
+
+    .sv {
+      border-radius: 22px;
+      overflow: hidden;
+      background: var(--sb);
+      display: flex;
+      flex-direction: column
+    }
+
+    .sv:nth-child(odd) {
+      background: var(--sp)
+    }
+
+    .sv .im {
+      height: 96px;
+      display: grid;
+      place-items: center;
+      font-size: 2.6rem;
+      color: var(--blue);
+      background: linear-gradient(135deg, #ffffff22, #1d4fd622)
+    }
+
+    .sv:nth-child(odd) .im {
+      color: var(--pink)
+    }
+
+    .sv .bd {
+      padding: 14px 16px 18px
+    }
+
+    .sv h3 {
+      margin: 0 0 4px;
+      font-size: 1.05rem
+    }
+
+    .sv p {
+      margin: 0;
+      font-size: .85rem;
+      color: var(--muted)
+    }
+
+    .es {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 7px
+    }
+
+    .es h3 {
+      margin: 0;
+      font-size: 1.02rem
+    }
+
+    .es li {
+      list-style: none;
+      font-size: .85rem;
+      color: var(--muted);
+      display: flex;
+      gap: 7px;
+      align-items: flex-start
+    }
+
+    .es ul {
+      padding: 0;
+      margin: 0;
+      display: grid;
+      gap: 4px
+    }
+
+    .es li svg {
+      color: var(--pink);
+      margin-top: 3px
+    }
+
+    .price-block {
+      margin-top: auto;
+      display: grid;
+      gap: 2px;
+    }
+
+    .price-caption {
+      color: var(--muted);
+      font-size: .72rem;
+      font-weight: 500;
+      letter-spacing: .03em;
+      text-transform: uppercase;
+    }
+
+    .price-line {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .price-regular {
+      color: #9299a5;
+      font-size: .88rem;
+      font-weight: 500;
+      text-decoration: line-through;
+      white-space: nowrap;
+    }
+
+    .pr {
+      color: var(--navy);
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin-left: auto;
+      text-align: right;
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .price-offer {
+      color: var(--pink);
+      font-size: .68rem;
+      font-weight: 700;
+      text-align: right;
+      line-height: 1.1;
+    }
+
+    .es .btn {
+      justify-content: center;
+      width: 100%
+    }
+
+    .btn.on {
+      background: var(--blue)
+    }
+
+    .two {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 16px;
+      margin-top: 20px
+    }
+
+    .mem {
+      background: linear-gradient(120deg, #0a2a7a, #16399c);
+      color: #fff;
+      border-radius: 24px;
+      padding: 24px
+    }
+
+    .mem h3 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600
+    }
+
+    .mem strong {
+      font-size: 2.3rem;
+      font-weight: 800;
+      display: block;
+      line-height: 1.1
+    }
+
+    .mem p {
+      margin: 6px 0 14px
+    }
+
+    .ben {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      font-size: .78rem;
+      text-align: center;
+      font-weight: 500
+    }
+
+    .ben svg {
+      display: block;
+      margin: 0 auto 6px;
+      font-size: 1.7rem;
+      color: #6cc3ff
+    }
+
+    .hos {
+      background: var(--sb);
+      border-radius: 24px;
+      padding: 24px
+    }
+
+    .hos h3 {
+      margin: 0 0 6px;
+      font-size: 1.4rem
+    }
+
+    .hos ul {
+      padding: 0;
+      margin: 10px 0 16px;
+      display: grid;
+      gap: 4px;
+      font-size: .88rem
+    }
+
+    .hos li {
+      list-style: none;
+      display: flex;
+      gap: 8px;
+      align-items: center
+    }
+
+    .hos li svg {
+      color: var(--blue)
+    }
+
+    .out {
+      display: inline-flex;
+      gap: 8px;
+      border: 2px solid var(--blue);
+      color: var(--blue);
+      border-radius: 99px;
+      padding: 9px 20px;
+      font-weight: 600;
+      font-size: .9rem
+    }
+
+    .how {
+      background: var(--sp);
+      border-radius: 24px;
+      padding: 22px 26px;
+      display: grid;
+      grid-template-columns: 1fr 3fr;
+      gap: 18px;
+      align-items: center
+    }
+
+    .how h2 {
+      margin: 0;
+      font-size: 1.7rem;
+      line-height: 1.1
+    }
+
+    .how h2 span {
+      color: var(--pink)
+    }
+
+    .h4 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px
+    }
+
+    .h4 .st b {
+      font-size: .92rem
+    }
+
+    .band {
+      background: #0a2a7a;
+      color: #fff;
+      margin-top: 26px
+    }
+
+    .band .w {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      padding: 16px 18px
+    }
+
+    .band div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: .78rem;
+      opacity: .9
+    }
+
+    .band b {
+      display: block;
+      font-size: .85rem
+    }
+
+    .band svg {
+      font-size: 1.9rem
+    }
+
+    .wa {
+      background: var(--sp);
+      border-radius: 20px;
+      padding: 16px 22px;
+      margin: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap
+    }
+
+    .wa h3 {
+      margin: 0;
+      font-size: 1.05rem
+    }
+
+    .wa p {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem
+    }
+
+    footer {
+      background: #0a2a7a;
+      color: #fff;
+      padding: 26px 0 18px
+    }
+
+    .ft {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between
+    }
+
+    footer nav {
+      margin: 0;
+      font-size: .82rem;
+      gap: 16px;
+      flex-wrap: wrap
+    }
+
+    .ph {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      font-size: 1.05rem;
+      font-weight: 700
+    }
+
+    .ph small {
+      display: block;
+      font-weight: 400;
+      font-size: .72rem
+    }
+
+    .ph svg {
+      font-size: 2.2rem;
+      color: #25d366
+    }
+
+    .cp {
+      text-align: center;
+      font-size: .72rem;
+      opacity: .8;
+      margin: 16px 0 0
+    }
+
+    dialog {
+      border: 0;
+      border-radius: 22px;
+      padding: 0;
+      width: min(640px, 94vw);
+      background: var(--card);
+      color: var(--ink);
+      box-shadow: 0 20px 60px #0007
+    }
+
+    dialog::backdrop {
+      background: #0a1a4a99
+    }
+
+    .dh {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .dh h3 {
+      margin: 0
+    }
+
+    .dl {
+      padding: 6px 20px;
+      max-height: 46vh;
+      overflow: auto
+    }
+
+    /* Cada estudio conserva nombre a la izquierda y precio/acción a la derecha. */
+    .dl .dl-item {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      align-items: center;
+      gap: 10px;
+      padding: 9px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: .82rem;
+    }
+
+    .dl-item-name {
+      min-width: 0;
+      overflow-wrap: anywhere;
+      line-height: 1.4;
+    }
+
+    .dl-item-actions {
+      display: inline-flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .dl-item-price {
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .dl button {
+      flex: none;
+      white-space: nowrap;
+      border: 0;
+      background: none;
+      color: var(--pink);
+      font: 600 .8rem Poppins;
+      cursor: pointer;
+      padding: 4px 2px;
+    }
+
+    .df {
+      padding: 14px 20px 20px;
+      display: grid;
+      gap: 10px
+    }
+
+    .df .tot {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1.1rem
+    }
+
+    .df small {
+      color: var(--muted)
+    }
+
+    .df .btn {
+      justify-content: center
+    }
+
+    .emp {
+      padding: 22px 0;
+      color: var(--muted);
+      text-align: center;
+      font-size: .92rem
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+    }
+
+    .sprite {
+      position: absolute
+    }
+
+    .logo>svg {
+      font-size: 40px
+    }
+
+    .how .sub {
+      font-size: .9rem;
+      font-weight: 400;
+      color: var(--muted)
+    }
+
+    .hp0 {
+      margin: 0;
+      color: var(--muted)
+    }
+
+    #x {
+      font-size: 1.3rem
+    }
+
+    .how .st .num.pk {
+      color: var(--pink)
+    }
+
+    .how .st .num.bl {
+      color: var(--blue)
+    }
+
+    .df label {
+      display: grid;
+      gap: 4px;
+      font-size: .82rem;
+      font-weight: 600
+    }
+
+    .df input,
+    .df select {
+      font: 500 .95rem Poppins, system-ui, sans-serif;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: var(--bg);
+      color: var(--ink);
+      width: 100%
+    }
+
+    .df .row2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px
+    }
+
+    .df .ck {
+      display: flex;
+      gap: 8px;
+      align-items: flex-start;
+      font-weight: 400
+    }
+
+    .df .ck input {
+      width: auto;
+      margin-top: 3px
+    }
+
+    .hpot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden
+    }
+
+    .err {
+      margin: 0;
+      color: #c4004f;
+      font-size: .88rem;
+      font-weight: 600
+    }
+
+    .okm {
+      margin: 0;
+      padding: 12px;
+      border-radius: 12px;
+      background: var(--sb);
+      font-weight: 600
+    }
+
+    .wl {
+      text-align: center;
+      color: var(--blue);
+      font-weight: 600;
+      font-size: .88rem
+    }
+
+    .skel {
+      min-height: 210px;
+      background: linear-gradient(90deg, var(--sb), var(--card), var(--sb));
+      background-size: 200% 100%;
+      animation: sk 1.2s infinite
+    }
+
+    @keyframes sk {
+      to {
+        background-position: -200% 0
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .skel {
+        animation: none
+      }
+    }
+
+    .btn:disabled {
+      opacity: .6;
+      cursor: wait
+    }
+
+    .retry {
+      border: 0;
+      background: none;
+      color: var(--blue);
+      font: 600 .9rem Poppins, system-ui, sans-serif;
+      cursor: pointer;
+      text-decoration: underline
+    }
+
+    /* ---- Responsivo: celular (<=600), tablet (<=960), PC (>960) ---- */
+    img,
+    svg,
+    video {
+      max-width: 100%
+    }
+
+    .ic {
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center
+    }
+
+    .res button,
+    .dl button {
+      min-height: 40px
+    }
+
+    .dl button {
+      padding: 0 6px
+    }
+
+    .df input,
+    .df select {
+      font-size: 16px;
+      min-height: 46px
+    }
+
+    .burger,
+    .only-s {
+      display: none
+    }
+
+    dialog {
+      max-height: calc(100dvh - 24px);
+      overflow: auto
+    }
+
+    .dl {
+      max-height: 28dvh
+    }
+
+    @media (min-width:1280px) {
+      .w {
+        max-width: 1240px
+      }
+    }
+
+    @media (max-width:960px) {
+      .burger {
+        display: flex;
+        order: 3
+      }
+
+      .hd {
+        gap: 8px
+      }
+
+      .hd>.btn {
+        order: 1;
+        margin-left: auto
+      }
+
+      #cartBtn {
+        order: 2
+      }
+
+      #menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        margin: 0;
+        padding: 6px max(18px, env(safe-area-inset-left)) 16px;
+        background: var(--bg);
+        border-bottom: 1px solid var(--line);
+        box-shadow: 0 14px 24px #0a2a7a1f
+      }
+
+      header.open #menu {
+        display: flex
+      }
+
+      #menu a {
+        padding: 14px 0;
+        font-size: 1rem;
+        border-bottom: 1px solid var(--line)
+      }
+
+      #menu a.btn.only-s {
+        display: inline-flex;
+        border: 0;
+        justify-content: center;
+        margin-top: 12px;
+        padding: 14px
+      }
+
+      .h4 {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media (max-width:860px) {
+      .hero {
+        background-image: url("img/homelicare-hero.webp");
+        background-position: 62% center;
+        background-size: cover;
+        padding: 30px 0 26px
+      }
+
+      .hero .w,
+      .steps,
+      .how,
+      .two {
+        grid-template-columns: 1fr
+      }
+
+      .trust {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 16px;
+        padding: 4px 16px
+      }
+
+      .trust div:nth-last-child(-n+2) {
+        border: 0
+      }
+
+      .steps,
+      .how,
+      .mem,
+      .hos {
+        padding: 20px
+      }
+
+      .ben {
+        grid-template-columns: repeat(2, 1fr)
+      }
+    }
+
+    @media (max-width:600px) {
+
+      .st3,
+      .h4 {
+        grid-template-columns: 1fr
+      }
+
+      h2.t {
+        font-size: 1.4rem
+      }
+
+      .chips {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 6px;
+        margin-top: 20px
+      }
+
+      .chip {
+        width: auto;
+        font-size: .7rem
+      }
+
+      .chip i {
+        width: 56px;
+        height: 56px;
+        font-size: 1.6rem
+      }
+
+      #servicios .g4 {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px
+      }
+
+      .sv .im {
+        height: 70px;
+        font-size: 2rem
+      }
+
+      .sv .bd {
+        padding: 10px 12px 14px
+      }
+
+      .sv h3 {
+        font-size: .92rem
+      }
+
+      .sv p {
+        font-size: .78rem
+      }
+
+      .sf svg {
+        margin-left: 8px
+      }
+
+      .sf .btn {
+        padding: 11px 16px;
+        font-size: .9rem
+      }
+
+      .band .w {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px
+      }
+
+      .band div {
+        font-size: .72rem
+      }
+
+      .band svg {
+        font-size: 1.5rem
+      }
+
+      .wa .btn {
+        width: 100%;
+        justify-content: center
+      }
+
+      .ft {
+        flex-direction: column;
+        align-items: flex-start
+      }
+
+      dialog {
+        width: 100%;
+        max-width: none;
+        margin: auto 0 0;
+        border-radius: 22px 22px 0 0;
+        padding-bottom: env(safe-area-inset-bottom, 0px)
+      }
+    }
+
+    @media (max-width:520px) {
+      .hd>.btn {
+        display: none
+      }
+
+      .logo {
+        font-size: 1.2rem
+      }
+    }
+
+    @media (max-width:420px) {
+      .xs {
+        display: none
+      }
+
+      .chip {
+        font-size: .66rem
+      }
+    }
+
+    /* ---- Correcciones tras prueba en iPhone ---- */
+    [hidden] {
+      display: none !important
+    }
+
+    body {
+      overflow-x: clip
+    }
+
+    .sf input {
+      flex: 1 1 0;
+      width: 0;
+      min-width: 0
+    }
+
+    .hero .w>*,
+    .steps>*,
+    .how>*,
+    .two>*,
+    .st3>*,
+    .h4>*,
+    .g4>* {
+      min-width: 0
+    }
+
+    @media (max-width:860px) {
+
+      .hero .w,
+      .steps,
+      .how,
+      .two {
+        grid-template-columns: minmax(0, 1fr)
+      }
+    }
+
+    @media (max-width:600px) {
+
+      .st3,
+      .h4 {
+        grid-template-columns: minmax(0, 1fr)
+      }
+    }
+
+    @media (max-width:520px) {
+      #cartBtn {
+        margin-left: auto
+      }
+    }
+
+    /* Categorías debajo del panel de confianza, en la columna derecha del banner */
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-width: 0
+    }
+
+    .hero-side .chips {
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 0
+    }
+
+    .hero-side .chip {
+      width: calc((100% - 36px)/4);
+      max-width: 92px
+    }
+
+    @media (max-width:860px) {
+      .hero-side {
+        gap: 14px
+      }
+
+      .hero-side .chips {
+        justify-content: center
+      }
+    }
+
+    @media (max-width:600px) {
+      .hero-side .chips {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 6px
+      }
+
+      .hero-side .chip {
+        width: auto;
+        max-width: none
+      }
+    }
+
+
+
+    /* Autocompletado de domicilio */
+    .address-wrap {
+      position: relative;
+      display: grid;
+      gap: 6px
+    }
+
+    .address-wrap input {
+      font: 500 .95rem Poppins, system-ui, sans-serif;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      background: var(--bg);
+      color: var(--ink);
+      width: 100%;
+      min-height: 48px
+    }
+
+    .address-help {
+      font-size: .76rem;
+      color: var(--muted);
+      font-weight: 400
+    }
+
+    .address-status {
+      font-size: .8rem;
+      color: var(--blue);
+      font-weight: 500;
+      min-height: 1em
+    }
+
+    .address-status.error {
+      color: #c4004f
+    }
+
+    .address-selected {
+      display: none;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: var(--sb);
+      font-size: .82rem;
+      color: var(--ink)
+    }
+
+    .address-selected.show {
+      display: block
+    }
+
+
+    /* Desglose de cotización */
+    .price-breakdown {
+      display: grid;
+
+      padding: 12px 14px;
+      background: var(--sb);
+      border: 1px solid var(--line);
+      border-radius: 14px
+    }
+
+    .price-breakdown>div {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: .9rem
+    }
+
+    .price-breakdown>div span {
+      color: var(--muted)
+    }
+
+    .price-breakdown strong {
+      font-weight: 600;
+      font-variant-numeric: tabular-nums;
+      text-align: right
+    }
+
+    .price-breakdown .grand {
+      border-top: 1px solid var(--line);
+      padding-top: 9px;
+      margin-top: 3px;
+      font-weight: 800
+    }
+
+    .price-breakdown .grand span,
+    .price-breakdown .grand strong {
+      color: var(--ink);
+      font-weight: 800
+    }
+
+    .address-wrap {
+      position: relative;
+      display: grid;
+      gap: 5px
+    }
+
+    .address-wrap>label {
+      font-size: .82rem;
+      font-weight: 600
+    }
+
+    .address-wrap input {
+      font: 500 16px Poppins, system-ui, sans-serif;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 12px;
+      background: var(--bg);
+      color: var(--ink);
+      width: 100%;
+      min-height: 50px
+    }
+
+    .address-wrap input:focus {
+      outline: 3px solid #1d4fd633;
+      border-color: var(--blue)
+    }
+
+    .address-suggestions {
+      position: absolute;
+      top: calc(100% - 25px);
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      box-shadow: 0 12px 28px #0003;
+      max-height: 240px;
+      overflow: auto
+    }
+
+    .address-suggestions[hidden] {
+      display: none !important
+    }
+
+    .address-suggestion {
+      display: block;
+      width: 100%;
+      padding: 12px 14px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font: 400 .88rem Poppins, system-ui, sans-serif;
+      cursor: pointer
+    }
+
+    .address-suggestion:last-child {
+      border-bottom: 0
+    }
+
+    .address-suggestion:hover,
+    .address-suggestion:focus {
+      background: var(--sb);
+      outline: 0
+    }
+
+    .address-help,
+    .address-status {
+      font-size: .75rem;
+      color: var(--muted);
+      line-height: 1.4
+    }
+
+    .address-status.error {
+      color: #c4004f
+    }
+
+    .address-selected {
+      font-size: .75rem;
+      color: #087443;
+      font-weight: 600
+    }
+
+
+
+
+
+    .price-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.price-regular {
+    color: #9299A5;
+    text-decoration: line-through;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.current-price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: auto;
+    text-align: right;
+}
+
+.price-caption {
+    font-size: 12px;
+    color: #64748b;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+
+.current-price .pr {
+    margin-top: 0;
+}
+
+.price-offer {
+    display: block;
+    text-align: right;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+section[id] {
+    scroll-margin-top: 100px;
+}
+
+/* Elemento activo del menú */
+.nav-links a.active {
+    color: #f0147f;
+}
+
+.nav-links a.active::after {
+    width: 100%;
+}
+
+    
+    /* Agendamiento por pasos */
+    .booking-form { gap: 14px; }
+    .booking-stepper { display:flex; align-items:center; justify-content:space-between; gap:8px;  }
+    .booking-stepper>i { height:2px; background:var(--line); flex:1; }
+    .booking-step { display:grid; justify-items:center; gap:5px; min-width:68px; color:var(--muted); }
+    .booking-step span { width:34px; height:34px; border:2px solid #cfd6e4; border-radius:50%; display:grid; place-items:center; background:var(--card); font-weight:600; }
+    .booking-step small { font-size:.72rem; white-space:nowrap; }
+    .booking-step.active, .booking-step.done { color:var(--blue); }
+    .booking-step.active span, .booking-step.done span { border-color:var(--blue); color:var(--blue); }
+    .booking-step.done span { background:var(--sb); }
+    .booking-panel { display:grid; gap:12px; }
+    .booking-panel[hidden] { display:none !important; }
+    .booking-panel h4 { margin:0; font-size:1rem; }
+    .booking-actions { display:flex; gap:10px; }
+    .booking-actions .btn { flex:1; justify-content:center; }
+    .booking-actions .secondary { background:var(--sb); color:var(--blue); }
+    .booking-final-summary { padding:12px; border-radius:12px; background:var(--sb); font-size:.86rem; }
+    .booking-form .dl { max-height:24vh; overflow:auto; padding:0 2px; }
+    @media(max-width:600px) {
+      .booking-step small { font-size:.68rem; }
+      .booking-actions { position:sticky; bottom:0; background:var(--card); padding-top:8px; }
+    }
+\n  </style>
+</head>
+
+<body>
+  <svg class="sprite" width="0" height="0" aria-hidden="true">
+    <defs>
+      <symbol id="flask" viewBox="0 0 24 24">
+        <path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 2 3h10a2 2 0 0 0 2-3l-5-9V3M7.5 15h9" />
+      </symbol>
+      <symbol id="nurse" viewBox="0 0 24 24">
+        <circle cx="12" cy="8" r="4" />
+        <path d="M4 21c0-4 3.5-6 8-6s8 2 8 6M12 6v4M10 8h4" />
+      </symbol>
+      <symbol id="steth" viewBox="0 0 24 24">
+        <path d="M6 3v6a4 4 0 0 0 8 0V3M10 13v2a5 5 0 0 0 10 0v-2" />
+        <circle cx="20" cy="11" r="2" />
+      </symbol>
+      <symbol id="home" viewBox="0 0 24 24">
+        <path d="M3 11l9-8 9 8M5 9.5V21h14V9.5M10 21v-6h4v6" />
+      </symbol>
+      <symbol id="cart" viewBox="0 0 24 24">
+        <path d="M2 3h3l2.5 12h11L21 7H6M9 20h.01M17 20h.01" />
+      </symbol>
+      <symbol id="check" viewBox="0 0 24 24">
+        <path d="M5 12.5l4.5 4.5L19 7.5" />
+      </symbol>
+      <symbol id="clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="shield" viewBox="0 0 24 24">
+        <path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z" />
+        <path d="M8.5 12l2.5 2.5 4.5-5" />
+      </symbol>
+      <symbol id="heart" viewBox="0 0 24 24">
+        <path d="M12 20s-8-5-8-11a4.5 4.5 0 0 1 8-2.5A4.5 4.5 0 0 1 20 9c0 6-8 11-8 11z" />
+      </symbol>
+      <symbol id="pin" viewBox="0 0 24 24">
+        <path d="M12 21s7-6 7-11a7 7 0 0 0-14 0c0 5 7 11 7 11z" />
+        <circle cx="12" cy="10" r="2.5" />
+      </symbol>
+      <symbol id="card" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="14" rx="2" />
+        <path d="M3 10h18M7 15h3" />
+      </symbol>
+      <symbol id="search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="M20 20l-4-4" />
+      </symbol>
+      <symbol id="pct" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M8 16l8-8M8.5 8.5h.01M15.5 15.5h.01" />
+      </symbol>
+      <symbol id="brain" viewBox="0 0 24 24">
+        <path
+          d="M9 4a3 3 0 0 0-3 3 3 3 0 0 0-2 5 3 3 0 0 0 3 5 3 3 0 0 0 5 1V4a3 3 0 0 0-3 0zM15 4a3 3 0 0 1 3 3 3 3 0 0 1 2 5 3 3 0 0 1-3 5 3 3 0 0 1-5 1" />
+      </symbol>
+      <symbol id="apple" viewBox="0 0 24 24">
+        <path
+          d="M12 7c-3-2-8-1-8 5 0 5 3 9 5 9 1.5 0 2-.7 3-.7s1.500.7 3 .7c2 0 5-4 5-9 0-6-5-7-8-5zM12 7c0-2 1-3 3-4" />
+      </symbol>
+      <symbol id="file" viewBox="0 0 24 24">
+        <path d="M6 3h8l4 4v14H6zM14 3v4h4M9 12h6M9 16h6" />
+      </symbol>
+      <symbol id="cal" viewBox="0 0 24 24">
+        <rect x="3" y="5" width="18" height="16" rx="2" />
+        <path d="M3 10h18M8 3v4M16 3v4M9 15l2 2 4-4" />
+      </symbol>
+      <symbol id="wa" viewBox="0 0 24 24">
+        <path
+          d="M4 20l1.200-4A8 8 0 1 1 8 19zM9 9c0 3 3 6 6 6l1.500-1.500-2-1-1 .8c-1-.4-2-1.400-2.400-2.400l.8-1-1-2z" />
+      </symbol>
+      <symbol id="plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 7h16M4 12h16M4 17h16" />
+      </symbol>
+      <symbol id="i-close" viewBox="0 0 24 24">
+        <path d="M6 6l12 12M18 6L6 18" />
+      </symbol>
+    </defs>
+  </svg>
+
+  <header>
+    <div class="w hd">
+      <a class="logo" href="#inicio" aria-label="HomeliCare, inicio">
+    <img id="logoHomeliCare"
+         src="img/HomeliCare_modo_claro.png"
+         width="170"
+         alt="HomeliCare Salud a Domicilio">
+</a>
+      <nav id="menu" aria-label="Principal"><a class="on" href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a
+          href="#como">Cómo funciona</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><a
+          class="btn only-s" id="agendar2" href="#">Agendar servicio</a></nav>
+      <button class="ic" id="cartBtn" aria-label="Abrir carrito"><svg>
+          <use href="#cart" />
+        </svg><span class="badge" id="badge" hidden>0</span></button>
+      <label class="theme-control" for="themeToggle" title="Cambiar apariencia">
+        <span class="theme-icon" aria-hidden="true">☼</span>
+        <span class="theme-switch"><input id="themeToggle" type="checkbox" role="switch" aria-label="Activar apariencia oscura"><i></i></span>
+      </label>
+      <a class="btn" id="agendar" href="#" target="_blank" rel="noopener noreferrer">Agendar servicio</a>
+      <button class="ic burger" id="burger" type="button" aria-label="Abrir menú" aria-expanded="false"
+        aria-controls="menu"><svg>
+          <use href="#i-menu" />
+        </svg></button>
+    </div>
+  </header>
+
+  <main id="inicio">
+    <div class="hero">
+      <div class="w">
+        <div>
+          <h1 class="service-label" style="text-align: left; font-size: 40px;">Tu salud, <em>en la comodidad</em> de tu hogar</h1>
+          <p class="service-label" style="text-align: left;">Estudios de laboratorio, enfermería y atención médica a domicilio. <b>Rápido, seguro y fácil.</b></p>
+          <div class="sb">
+            <div class="sf"><svg>
+                <use href="#search" />
+              </svg><input id="q" type="search" placeholder="Busca el servicio que deseas..." autocomplete="off"
+                aria-label="Buscar estudio de laboratorio" aria-controls="res" aria-autocomplete="list">
+                <button class="btn" id="cot" type="button">Buscar</button></div>
+            <div class="res" id="res" aria-live="polite" hidden></div>
+          </div>
+        </div>
+        <div class="hero-side">
+          <div class="trust" aria-label="Por qué elegirnos">
+            <div><svg>
+                <use href="#shield" />
+              </svg>Personal capacitado</div>
+            <div><svg>
+                <use href="#home" />
+              </svg>Comodidad en tu hogar</div>
+            <div><svg>
+                <use href="#clock" />
+              </svg>Puntualidad</div>
+            <div><svg>
+                <use href="#heart" />
+              </svg>Trato humano</div>
+          </div>
+          <div class="chips">
+            <a class="chip" href="#estudios"><i><svg>
+                  <use href="#flask" />
+                </svg></i><span class="service-label">Estudios de laboratorio</span></a>
+            <a class="chip" href="#servicios"><i><svg>
+                  <use href="#nurse" />
+                </svg></i><span class="service-label">Enfermería a domicilio</span></a>
+            <a class="chip" href="#servicios"><i><svg>
+                  <use href="#steth" />
+                </svg></i><span class="service-label">Atención médica</span></a>
+            <a class="chip" href="#servicios"><i><svg>
+                  <use href="#home" />
+                </svg></i><span class="service-label">Cuidado en el hogar</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w">
+      <section id="searchResultsSection" hidden>
+        <div class="sh">
+          <div>
+            <h2 class="t">Resultados de búsqueda</h2>
+            <p id="searchResultsCaption">Catálogo de laboratorio AmahCare. Selecciona los estudios que deseas agregar a
+              tu cotización.</p>
+          </div>
+        </div>
+        <div class="g4" id="searchResults" aria-live="polite"></div>
+      </section>
+
+      <div class="how">
+          <h2>¿Cómo <span>funciona?</span><br><small class="sub">Es muy fácil, en solo 4 pasos.</small></h2>
+          <div class="h4">
+            <div class="st"><span class="num pk">1</span>
+              <div><b>Elige el servicio</b>Explora nuestro catálogo y agrega lo que necesitas.</div>
+            </div>
+            <div class="st"><span class="num bl">2</span>
+              <div><b>Agenda la cita</b>Selecciona la fecha, hora y dirección.</div>
+            </div>
+            <div class="st"><span class="num pk">3</span>
+              <div><b>Vamos a tu domicilio</b>Nuestro equipo llega con todo lo necesario.</div>
+            </div>
+            <div class="st"><span class="num bl">4</span>
+              <div><b>Recibe tus resultados</b>En línea o en físico, según tu preferencia.</div>
+            </div>
+          </div>
+        </div>
+      <!---
+      <div class="how">
+        <h2>Agenda tus estudios de laboratorio <span>a domicilio</span></h2>
+        <div class="st">
+          <div class="st"><span class="num">1</span>
+            <div><b>Cotiza</b>Selecciona tus estudios de forma rápida</div>
+          </div>
+          <div class="st"><span class="num bl">2</span>
+            <div><b>Agenda</b>Elige la fecha y hora que más te convenga</div>
+          </div>
+          <div class="st"><span class="num">3</span>
+            <div><b>Recibimos</b>Vamos a tu domicilio y listo</div>
+          </div>
+          <div class="st"><span class="num bl">4</span>
+              <div><b>Recibe tus resultados</b>En línea o en físico, según tu preferencia.</div>
+            </div>
+        </div>
+      </div>-->
+
+
+    
+
+      <section id="servicios">
+        <div class="sh">
+          <h2 class="t">Nuestros servicios</h2><a href="#servicios" style="display: none;">Ver todos</a>
+        </div>
+        <div class="g4">
+          <div class="sv">
+            <div class="im"><svg>
+                <use href="#flask" />
+              </svg></div>
+            <div class="bd">
+              <h3>Estudios de laboratorio</h3>
+              <p>Una amplia variedad de estudios con toma de muestra a domicilio.</p>
+            </div>
+          </div>
+          <div class="sv">
+            <div class="im"><svg>
+                <use href="#nurse" />
+              </svg></div>
+            <div class="bd">
+              <h3>Enfermería a domicilio</h3>
+              <p>Aplicación de medicamentos, curaciones, signos vitales y más.</p>
+            </div>
+          </div>
+          <div class="sv">
+            <div class="im"><svg>
+                <use href="#steth" />
+              </svg></div>
+            <div class="bd">
+              <h3>Atención médica</h3>
+              <p>Consulta médica en la comodidad de tu hogar.</p>
+            </div>
+          </div>
+          <div class="sv">
+            <div class="im"><svg>
+                <use href="#home" />
+              </svg></div>
+            <div class="bd">
+              <h3>Cuidado en el hogar</h3>
+              <p>Acompañamiento y cuidados personalizados para ti o tus seres queridos.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="estudios">
+        <div class="sh">
+          <div>
+            <h2 class="t">Estudios más solicitados</h2>
+            <p>Los estudios más comunes, al mejor precio y en la puerta de tu casa.</p>
+          </div><a href="#q">Buscar estudios</a>
+        </div>
+        <div class="g4" id="top"></div>
+        <div class="two" id="nosotros">
+          <div class="mem">
+            <h3>Membresía</h3><strong>Homeli+</strong>
+            <p>desde $75.00 pesos al mes<br>Tu salud y la de tu familia, siempre cerca.</p>
+            <div class="ben"><span><svg>
+                  <use href="#steth" />
+                </svg>Médico general 24 horas</span><span><svg>
+                  <use href="#apple" />
+                </svg>Nutriólogo ilimitado</span><span><svg>
+                  <use href="#brain" />
+                </svg>Psicólogo ilimitado</span><span><svg>
+                  <use href="#pct" />
+                </svg>Descuentos en estudios</span></div>
+          </div>
+          <div class="hos">
+            <h3>Hospitalización en el hogar</h3>
+            <p class="hp0">Atención integral, segura y personalizada sin salir de casa.</p>
+            <ul>
+              <li><svg>
+                  <use href="#check" />
+                </svg>Supervisión médica</li>
+              <li><svg>
+                  <use href="#check" />
+                </svg>Enfermería especializada</li>
+              <li><svg>
+                  <use href="#check" />
+                </svg>Equipo y medicamentos</li>
+              <li><svg>
+                  <use href="#check" />
+                </svg>Planes a medida</li>
+            </ul>
+            <a class="out" href="#contacto">Conoce más</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="como">
+        <div class="how">
+          <h2>¿Cómo <span>funciona?</span><br><small class="sub">Es muy fácil, en solo 4 pasos.</small></h2>
+          <div class="h4">
+            <div class="st"><span class="num pk">1</span>
+              <div><b>Elige el servicios</b>Explora nuestro catálogo y agrega lo que necesitas.</div>
+            </div>
+            <div class="st"><span class="num bl">2</span>
+              <div><b>Agenda la cita</b>Selecciona la fecha, hora y dirección.</div>
+            </div>
+            <div class="st"><span class="num pk">3</span>
+              <div><b>Vamos a tu domicilio</b>Nuestro equipo llega con todo lo necesario.</div>
+            </div>
+            <div class="st"><span class="num bl">4</span>
+              <div><b>Recibe tus resultados</b>En línea o en físico, según tu preferencia.</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="band">
+      <div class="w">
+        <div><svg>
+            <use href="#shield" />
+          </svg><span><b>Calidad y confianza</b>Servicios con altos estándares</span></div>
+        <div><svg>
+            <use href="#heart" />
+          </svg><span><b>Atención personalizada</b>Nos adaptamos a tus necesidades</span></div>
+        <div><svg>
+            <use href="#pin" />
+          </svg><span><b>Cobertura en tu ciudad</b>Llegamos hasta tu domicilio</span></div>
+        <div><svg>
+            <use href="#card" />
+          </svg><span><b>Pago seguro y flexible</b>Múltiples formas de pago</span></div>
+      </div>
+    </div>
+
+    <div class="w">
+      <div class="wa">
+        <div>
+          <h3>¿No sabes qué estudio necesitas?</h3>
+          <p>Envíanos tu orden médica y nosotros te ayudamos a cotizarla.</p>
+        </div>
+        <a class="btn" id="orden" href="#" target="_blank" rel="noopener noreferrer"><svg>
+            <use href="#wa" />
+          </svg>Enviar orden por WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <footer id="contacto">
+    <div class="w">
+      <div class="ft">
+        <img src="img/HomeliCare_modo_oscuro.png" width="170">
+        <!--<span class="logo">Homeli<b>Care</b></span>-->
+        <nav aria-label="Pie"><a href="#inicio">Inicio</a><a href="#servicios">Servicios</a><a href="#como">Cómo
+            funciona</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a></nav>
+        <a class="ph" href="#" id="tel" target="_blank" rel="noopener noreferrer"><svg>
+            <use href="#wa" />
+          </svg><span>229 437 2098<small>Escríbenos por WhatsApp</small></span></a>
+      </div>
+      <p class="cp">© 2026 HomeliCare. Todos los derechos reservados. · Términos y condiciones · Aviso de privacidad</p>
+    </div>
+  </footer>
+
+  <dialog id="dlg" aria-labelledby="dt">
+    <div class="dh">
+      <h3 id="dt">Agenda tu servicio</h3><button class="ic" id="x" type="button" aria-label="Cerrar">✕</button>
+    </div>
+    <form class="df booking-form" id="frm" novalidate>
+      <div class="booking-stepper" aria-label="Pasos para agendar">
+        <div class="booking-step active" data-step-indicator="1"><span>1</span><small>Cotización</small></div>
+        <i></i>
+        <div class="booking-step" data-step-indicator="2"><span>2</span><small>Contacto</small></div>
+        <i></i>
+        <div class="booking-step" data-step-indicator="3"><span>3</span><small>Agenda</small></div>
+      </div>
+
+      <section class="booking-panel active" data-step-panel="1">
+        <h4>Resumen de tu cotización</h4>
+        <div class="dl" id="dl"></div>
+        <div class="price-breakdown" aria-live="polite">
+          <div><span>Subtotal de estudios</span><strong id="subtotal">$0.00 MXN</strong></div>
+          <div><span>Servicio a domicilio</span><strong id="domicilio">$0.00 MXN</strong></div>
+          <div><span>IVA (16%)</span><strong id="iva">$0.00 MXN</strong></div>
+          <div class="grand"><span>Total general</span><strong id="tot">$0.00 MXN</strong></div>
+        </div>
+        <small id="nota">El domicilio es gratuito a partir de $1,000.00 MXN en estudios.</small>
+        <a class="wl" id="wl" href="#" target="_blank" rel="noopener noreferrer" style="display: none;">¿Prefieres WhatsApp?</a>
+      </section>
+
+      <section class="booking-panel" data-step-panel="2" hidden>
+        <h4>Datos de contacto y domicilio</h4>
+        <label>Nombre completo<input name="nombre" required maxlength="80" autocomplete="name"></label>
+        <label>WhatsApp (10 dígitos)<input name="tel" required inputmode="numeric" maxlength="16" autocomplete="tel-national"></label>
+        <div class="address-wrap">
+          <label for="addressInput">Dirección del servicio</label>
+          <input id="addressInput" name="dir" type="text" required maxlength="240" autocomplete="off"
+            placeholder="Ej. Av. Independencia 123, colonia Centro, Veracruz, Ver."
+            aria-describedby="addressHelp addressStatus" />
+          <div class="address-suggestions" id="addressSuggestions" role="listbox" hidden></div>
+          <small class="address-help" id="addressHelp">Escribe calle, número y colonia. Selecciona una dirección sugerida para validar su ubicación.</small>
+          <div class="address-status" id="addressStatus" role="status" aria-live="polite" ></div>
+          <div class="address-selected" id="addressSelected" style="display: none;"></div>
+        </div>
+        <input type="hidden" name="calle" id="addressStreet"><input type="hidden" name="numero" id="addressNumber"><input
+          type="hidden" name="colonia" id="addressNeighborhood"><input type="hidden" name="municipio"
+          id="addressCity"><input type="hidden" name="estado" id="addressState"><input type="hidden" name="cp"
+          id="addressPostalCode"><input type="hidden" name="pais" id="addressCountry"><input type="hidden" name="latitud"
+          id="addressLat"><input type="hidden" name="longitud" id="addressLng">
+      </section>
+
+      <section class="booking-panel" data-step-panel="3" hidden>
+        <h4>Fecha y horario</h4>
+        <div class="row2">
+          <label>Fecha<input type="date" name="fecha" required></label>
+          <label>Horario<select name="franja" required><option value="">Elige horario</option></select></label>
+        </div>
+        <label class="ck"><input type="checkbox" name="ok" required><span>Acepto el aviso de privacidad y el tratamiento de mis datos para agendar este servicio.</span></label>
+        <div class="booking-final-summary" id="bookingFinalSummary"></div>
+      </section>
+
+      <div class="hpot" aria-hidden="true"><input name="web" tabindex="-1" autocomplete="off"></div>
+      <p class="err" id="err" role="alert" hidden></p>
+      <p class="okm" id="ok" role="status" hidden></p>
+      <div class="booking-actions">
+        <button class="btn secondary" id="stepBack" type="button" hidden>Regresar</button>
+        <button class="btn" id="stepNext" type="button">Continuar</button>
+        <button class="btn" id="send" type="submit" hidden>Solicitar servicio</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="homelicare-config.js"></script>
+  <script src="homelicare-direcciones.js"></script>
+  <script src="homelicare-google-loader.js"></script>
+  <script>
+    (() => {
+      // Única fuente de configuración. No pongas aquí llaves ni secretos: todo lo de este archivo es público.
+      const CONFIG = Object.freeze({
+        API_BASE: "https://amahcarev2.somee.com/REQ.ashx?Comando=",
+        LAB_ID: "1384",
+        WA: "522294372098",
+        TIMEOUT_MS: 15000,
+        MAX_CART: 20,
+        ID_PROVEEDOR: "29"
+      });
+      const mock = (() => {
+        // Datos de ejemplo con la MISMA forma que devolverá la API. Eliminar este archivo al conectar producción.
+        const D = [
+          { id: "bh", name: "Biometría hemática", description: "Detecta anemia, infecciones y otros padecimientos.", resultsIn: "24 h", price: 380 },
+          { id: "qs6", name: "Química sanguínea (6 elementos)", description: "Evalúa función renal, hepática y glucosa.", resultsIn: "24 h", price: 620 },
+          { id: "ego", name: "Examen general de orina", description: "Detecta infecciones, problemas renales y más.", resultsIn: "24 h", price: 320 },
+          { id: "tir", name: "Perfil tiroideo (TSH, T3, T4)", description: "Evalúa el funcionamiento de la tiroides.", resultsIn: "48 h", price: 780 },
+          { id: "glu", name: "Glucosa en ayuno", description: "", resultsIn: "", price: null },
+          { id: "lip", name: "Perfil de lípidos", description: "", resultsIn: "", price: null },
+          { id: "hba", name: "Hemoglobina glicosilada", description: "", resultsIn: "", price: null }
+        ];
+        const norm = s => s.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const wait = v => new Promise(r => setTimeout(() => r(v), 150));
+        const featured = () => wait(D.filter(s => s.price != null));
+        const search = q => wait(D.filter(s => norm(s.name).includes(norm(q))).slice(0, 6));
+        const byIds = ids => wait(D.filter(s => ids.includes(s.id)));
+        const create = () => wait({ id: "HC-DEMO" });
+
+        return { featured, search, byIds, create };
+      })();
+      const api = (() => {
+        class ApiError extends Error {
+          constructor(message, status = 0, detail = null) { super(message); this.status = status; this.detail = detail; }
+        }
+        let catalogPromise = null;
+        let catalog = [];
+        const norm = v => String(v || "").normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        const parsePrice = v => {
+          if (v === null || v === undefined || v === "") return null;
+          const n = Number(String(v).replace(/[$,\\s]/g, ""));
+          return Number.isFinite(n) ? n : null;
+        };
+        const mapService = d => ({
+          id: String(d.idproducto ?? d.IdProducto ?? d.id ?? "").trim(),
+          // Si el catálogo ya entrega IdAnalisis, conservarlo para registrar el pedido sin recotizar.
+          // Si no viene, se utiliza el identificador seleccionado del propio catálogo.
+          analysisId: Number(d.IdAnalisis ?? d.idAnalisis ?? d.IDAnalisis ?? d.idproducto ?? d.IdProducto ?? d.id),
+          name: String(d.nombre ?? d.Nombre ?? d.name ?? "").trim(),
+          description: String(d.descripcion ?? d.Descripcion ?? d.descripcion ?? "No se agrego ninguna descripción").trim(),
+          resultsIn: "",
+          price: parsePrice(d.venta ?? d.Venta ?? d.price),
+          // Promoción aleatoria asignada una sola vez por estudio al cargar el catálogo.
+          // No altera el precio real utilizado en carrito ni al registrar el pedido.
+          promo: Math.random() < 0.35,
+          duration: d.duracion ?? d.Duracion ?? "",
+          providerId: String(d.ProveedorId ?? d.proveedorId ?? "").trim(),
+          provider: d.Proveedor ?? d.proveedor ?? ""
+        });
+        async function loadCatalog(signal) {
+          if (!catalogPromise) {
+            catalogPromise = (async () => {
+              const url = CONFIG.API_BASE + "DropServiciosAdmin&id=" + encodeURIComponent(CONFIG.LAB_ID);
+              let raw = await ajaxText(url, { timeout: CONFIG.TIMEOUT_MS });
+              raw = raw.replace(/\\\\r\\\\n/g, "").trim();
+              let data;
+              try { data = JSON.parse(raw); console.log(JSON.parse(raw)); } catch { throw new ApiError("La respuesta de DropServiciosAdmin no contiene JSON válido"); }
+              if (!Array.isArray(data)) throw new ApiError("DropServiciosAdmin no devolvió una lista de estudios");
+              // El endpoint DropServiciosAdmin devuelve servicios de varios proveedores.
+              // HomeliCare Lab corresponde a ProveedorId = 29; excluimos enfermería y otros servicios.
+              catalog = data.map(mapService).filter(x => x.id && x.name && (x.providerId === "29" || norm(x.provider).includes("homelicare lab")));
+              try { localStorage.setItem("hc.catalog.1384", JSON.stringify(catalog)); } catch { }
+              return catalog;
+            })().catch(err => { catalogPromise = null; throw err; });
+          }
+          if (signal?.aborted) throw new DOMException("Búsqueda cancelada", "AbortError");
+          return catalogPromise;
+        }
+        
+        // =====================================
+// ESTUDIOS DESTACADOS DE HOMELICARE
+// Puedes cambiar estos nombres cuando quieras.
+// Deben coincidir con el nombre del catálogo.
+// =====================================
+const FEATURED_STUDIES = [
+    "BIOMETRIA HEMATICA",
+    "EXAMEN GENERAL DE ORINA",
+    "PERFIL BIOQUIMICO DE 6 ELEMENTOS",
+    "COLESTEROL TOTAL", "PERFIL HORMONAL"
+];
+
+const getFeatured = async signal => {
+    const all = await loadCatalog(signal);
+
+    return FEATURED_STUDIES
+        .map(name => all.find(x => norm(x.name) === norm(name)))
+        .filter(x => x && x.price !== null);
+};
+
+        const searchStudies = async (q, signal) => {
+          const all = await loadCatalog(signal);
+          // Busca desde 3 caracteres y permite varias palabras aunque haya espacios,
+          // guiones, acentos o diferencias de mayúsculas.
+          const terms = norm(q).split(/\s+/).filter(Boolean);
+          if (norm(q).length < 3 || !terms.length) return [];
+          return all.filter(x => {
+            const name = norm(x.name);
+            return terms.every(term => name.includes(term));
+          });
+        };
+        const getStudiesByIds = async ids => {
+          let all = catalog;
+          if (!all.length) {
+            try { all = JSON.parse(localStorage.getItem("hc.catalog.1384") || "[]"); } catch { }
+          }
+          if (!all.length) all = await loadCatalog();
+          return all.filter(x => ids.includes(x.id));
+        };
+        const API = "https://amahcarev2.somee.com/REQ.ashx";
+        // Transporte AJAX con XMLHttpRequest. Los POST llevan JSON en el cuerpo como text/plain
+        // para evitar el preflight OPTIONS; REQ.ashx lee el cuerpo con StreamReader/JObject.
+        const ajaxText = (url, options = {}) => new Promise((resolve, reject) => {
+          const xhr = new XMLHttpRequest();
+          const method = String(options.method || "GET").toUpperCase();
+          xhr.open(method, url, true);
+          xhr.timeout = Number(options.timeout || CONFIG.TIMEOUT_MS);
+          xhr.withCredentials = false;
+          if (method === "POST") xhr.setRequestHeader("Content-Type", "text/plain;charset=UTF-8");
+          if (options.signal) {
+            if (options.signal.aborted) { reject(new DOMException("Solicitud cancelada", "AbortError")); return; }
+            options.signal.addEventListener("abort", () => xhr.abort(), { once: true });
+          }
+          xhr.onload = () => {
+            const raw = String(xhr.responseText || "").trim();
+            if (xhr.status >= 200 && xhr.status < 300) resolve(raw);
+            else reject(new ApiError(`AmahCare respondió HTTP ${xhr.status || "desconocido"}`, xhr.status, raw));
+          };
+          xhr.onerror = () => reject(new ApiError("El navegador bloqueó la solicitud AJAX. Si ya no aparece OPTIONS, revisa que REQ.ashx devuelva Access-Control-Allow-Origin para el origen de esta página.", xhr.status || 0));
+          xhr.ontimeout = () => reject(new ApiError("La solicitud a AmahCare excedió el tiempo de espera."));
+          xhr.onabort = () => reject(new DOMException("Solicitud cancelada", "AbortError"));
+          xhr.send(method === "POST" ? String(options.body || "") : null);
+        });
+        const request = async (url, options = {}) => {
+          const raw = await ajaxText(url, options);
+          if (!raw) return "";
+          try { return JSON.parse(raw.replace(/<[^>]*>$/, "").trim()); }
+          catch { return raw; }
+        };
+        const params = obj => new URLSearchParams(obj).toString();
+        const parseArray = value => {
+          if (Array.isArray(value)) return value;
+          if (typeof value === "string") { try { const x = JSON.parse(value); return Array.isArray(x) ? x : []; } catch { } }
+          return [];
+        };
+        const quote = async names => {
+          const data = await request(`${API}?Comando=CotizarAnalisisLabBot&id=${encodeURIComponent(names.join(","))}`);
+          const rows = parseArray(data);
+          if (!rows.length) throw new ApiError("AmahCare no encontró los estudios solicitados.");
+          const groups = names.map(name => ({ name, rows: rows.filter(x => norm(x.EstudioSolicitado) === norm(name)) }));
+          const selected = [];
+          for (const g of groups) {
+            const found = g.rows.filter(x => String(x.TipoResultado || "").toUpperCase() === "ENCONTRADO");
+            if (found.length !== 1) throw new ApiError(found.length > 1 ? `El estudio «${g.name}» tiene varias coincidencias. Se requiere revisión del laboratorio.` : `No se encontró el estudio «${g.name}» en el catálogo de AmahCare.`);
+            const x = found[0];
+            const id = Number(x.IdAnalisis ?? x.idAnalisis ?? x.IDAnalisis);
+            const price = Number(x.Precio ?? x.precio ?? 0);
+            if (!Number.isInteger(id) || id <= 0 || !Number.isFinite(price)) throw new ApiError(`La respuesta del estudio «${g.name}» no contiene IdAnalisis o precio válidos.`);
+            selected.push({ IdAnalisis: id, NomAnalisis: String(x.NomAnalisis || x.nombre || g.name), EstudioSolicitado: g.name, Precio: price, IdLab: x.IdLab ?? x.idLab ?? CONFIG.ID_PROVEEDOR, Tipo: x.Tipo || "Analisis" });
+          }
+          return selected;
+        };
+        const consultarHorarios = async fecha => {
+          const [y, m, d] = fecha.split("-");
+          const fechaMX = `${d}/${m}/${y}`;
+          const data = await request(`${API}?Comando=ConsultarHorariosLabBot&id=${encodeURIComponent(fechaMX)}`);
+          return parseArray(data).filter(x => x && x.Fecha && x.HoraInicio && x.HoraFin);
+        };
+        const getPatientId = value => {
+          if (typeof value === "number" && value > 0) return value;
+          if (typeof value === "string") { const t = value.trim(); if (/^\d+$/.test(t)) return Number(t); try { return getPatientId(JSON.parse(t)); } catch { } }
+          if (Array.isArray(value)) return value.length ? getPatientId(value[0]) : null;
+          if (value && typeof value === "object") { for (const k of ["IdPaciente", "idPaciente", "IDPaciente", "IdUser", "idUser", "IDUser", "Id", "id", "ID", "Usuario", "usuario"]) { const n = Number(value[k]); if (Number.isInteger(n) && n > 0) return n; } for (const v of Object.values(value)) { const n = getPatientId(v); if (n) return n; } }
+          return null;
+        };
+        const splitName = full => { const a = full.trim().split(/\s+/).filter(Boolean); if (a.length > 2) return { nom: a.slice(0, -2).join(" "), apellidos: a.slice(-2).join(" ") }; if (a.length === 2) return { nom: a[0], apellidos: a[1] }; return { nom: a[0] || "Paciente", apellidos: "WhatsApp" }; };
+        const createAppointment = async payload => {
+          const telefono = payload.patient.phone.replace(/\D/g, "").slice(-10);
+          const email = `${telefono}@homelicare.test`;
+          const name = splitName(payload.patient.name);
+          const a = payload.address;
+          if (!a || !Number.isFinite(a.latitude) || !Number.isFinite(a.longitude)) throw new ApiError("Selecciona una dirección válida en Google Maps.");
+          const address = {
+            cp: a.postalCode || "", estado: a.state || "", municipio: a.city || "", colonia: a.neighborhood || "",
+            calle: a.street || a.fullAddress, numero: a.streetNumber || "SN", lat: a.latitude, lon: a.longitude,
+            pais: a.country || "México"
+          };
+          // La cotización ya se calculó en el carrito. Aquí NO se vuelve a llamar
+          // CotizarAnalisisLabBot: se reutilizan los estudios, IDs y precios del catálogo.
+          const detalles = (payload.studies || []).map(s => ({
+            IdAnalisis: Number(s.analysisId ?? s.id),
+            NomAnalisis: String(s.name || "").trim(),
+            Precio: Number(s.price),
+            IdLab: s.providerId || CONFIG.ID_PROVEEDOR,
+            Tipo: "Analisis"
+          }));
+          if (!detalles.length) throw new ApiError("El carrito está vacío. Agrega al menos un estudio.");
+          const invalido = detalles.find(x => !Number.isInteger(x.IdAnalisis) || x.IdAnalisis <= 0 || !x.NomAnalisis || !Number.isFinite(x.Precio) || x.Precio < 0);
+          if (invalido) throw new ApiError("Uno de los estudios del carrito no contiene un identificador o precio válido. Actualiza el catálogo e inténtalo nuevamente.");
+          const subtotal = Math.round(detalles.reduce((s, x) => s + x.Precio, 0) * 100) / 100;
+          const domicilio = subtotal < 1000 ? 200 : 0;
+          const iva = Math.round((subtotal + domicilio) * 0.16 * 100) / 100;
+          const total = Math.round((subtotal + domicilio + iva) * 100) / 100;
+          const patientParams = params({ Comando: "InsertarPacienteAdminV2", Nom: name.nom, Apellidos: name.apellidos, Email: email, Tel: telefono, Genero: "No especificado", Peso: "0", Nacimiento: "01/01/1900", NombreFamiar: "No especificado", Parentesco: "No especificado", ContactoFamiliar: telefono, Pwd: telefono, Rol: "37", Asegurado: "0", TipoPoliza: "N/A", Aseguradora: "N/A", CategoriaEnf: "0", Cargo: "48", IdProveedor: CONFIG.ID_PROVEEDOR, NotasObservaciones: "Registro desde HomeliCare web", id: "0" });
+          const patientResult = await request(`${API}?${patientParams}`, { method: "POST", body: JSON.stringify({ Base64: "", Diagnosticos: [] }) });
+          const patientId = getPatientId(patientResult);
+          if (!patientId) throw new ApiError("AmahCare no devolvió un Id de paciente válido. No se continuará con domicilio ni orden.", 0, patientResult);
+          const addressParams = params({ Comando: "AgregarDomicilioAmah", CP: address.cp, Estado: address.estado, Municipio: address.municipio, Colonia: address.colonia, Calle: address.calle, ExteriorN: address.numero.toUpperCase() === "SN" ? "0" : address.numero, InteriorN: "0", Calle1: "", Calle2: "", Indicaciones: a.fullAddress, id: String(patientId), Latitud: address.lat, Longitud: address.lon, TelD: "", Pais: address.pais });
+          const addressResult = await request(`${API}?${addressParams}`);
+          if (addressResult === false || addressResult === 0 || (typeof addressResult === "string" && /^(false|error|0)$/i.test(addressResult.trim())) || (addressResult && typeof addressResult === "object" && (addressResult.success === false || addressResult.ok === false || addressResult.error))) {
+            throw new ApiError("AmahCare no confirmó el registro del domicilio. No se continuará con la orden.", 0, addressResult);
+          }
+          const date = payload.date;
+          const timeStart = payload.slot.HoraInicio.length === 5 ? payload.slot.HoraInicio + ":00" : payload.slot.HoraInicio;
+          const timeEnd = payload.slot.HoraFin.length === 5 ? payload.slot.HoraFin + ":00" : payload.slot.HoraFin;
+          const [yy, mm, dd] = date.split("-");
+          const fechaInicio = `${yy}-${mm}-${dd} ${timeStart}`;
+          const fechaFin = `${yy}-${mm}-${dd} ${timeEnd}`;
+          const idCompra = Array.from(crypto.getRandomValues(new Uint8Array(6))).map(x => x.toString(16).padStart(2, "0")).join("");
+          const articulos = detalles.map(x => ({ idco: idCompra, name: x.IdAnalisis, price: x.Precio, count: 1, desc: x.NomAnalisis, tipo: x.Tipo || "Analisis", prov: String(x.IdLab || CONFIG.ID_PROVEEDOR), fechai: fechaInicio, fechaf: fechaFin, cat: "Servicio", total: x.Precio, tipofecha: "libre", fechas: fechaInicio, IdAnalisis: x.IdAnalisis }));
+          const orderParams = params({ Comando: "InsertPedidoAdminBot", IdCompra: idCompra, Total: total, usu: email, id: String(patientId), IdProveedor: CONFIG.ID_PROVEEDOR, Fecha: fechaInicio, Categoria: "lab" });
+          const orderResult = await request(`${API}?${orderParams}`, { method: "POST", body: JSON.stringify({ Articulos: JSON.stringify(articulos) }) });
+          if (orderResult === false || orderResult === 0 || (typeof orderResult === "string" && /^(error|false|0)$/i.test(orderResult.trim())) || (orderResult && typeof orderResult === "object" && (orderResult.success === false || orderResult.ok === false || orderResult.error))) throw new ApiError("AmahCare rechazó el registro de la orden.", 0, orderResult);
+          return { id: idCompra, patientId, total, subtotal, domicilio, iva, addressResult, orderResult };
+        };
+        return { ApiError, getFeatured, searchStudies, getStudiesByIds, createAppointment, consultarHorarios };
+      })();
+      const { cart } = (() => {
+        // Carrito: solo guarda IDs (nunca precios) y valida lo leído de localStorage.
+        const KEY = "hc.cart.v1";
+        let ids = [];
+        const subs = new Set();
+        try {
+          const v = JSON.parse(localStorage.getItem(KEY) || "[]");
+          if (Array.isArray(v)) ids = v.filter(x => typeof x === "string" && /^[\w-]{1,40}$/.test(x)).slice(0, CONFIG.MAX_CART);
+        } catch { /* almacenamiento no disponible: carrito en memoria */ }
+        const save = () => { try { localStorage.setItem(KEY, JSON.stringify(ids)); } catch { } subs.forEach(f => f()); };
+        const cart = {
+          get ids() { return [...ids]; },
+          has: id => ids.includes(id),
+          add(id) { if (!ids.includes(id) && ids.length < CONFIG.MAX_CART) { ids.push(id); save(); } },
+          remove(id) { ids = ids.filter(x => x !== id); save(); },
+          clear() { ids = []; save(); },
+          subscribe(f) { subs.add(f); }
+        };
+
+        return { cart };
+      })();
+
+      // Sin innerHTML: todo dato externo entra como texto (textContent), así no hay XSS por construcción.
+      const $ = s => document.querySelector(s);
+      const MXN = n => "$" + n.toLocaleString("es-MX") + " MXN";
+      const NS = "http://www.w3.org/2000/svg";
+      const icon = n => { const s = document.createElementNS(NS, "svg"), u = document.createElementNS(NS, "use"); u.setAttribute("href", "#" + n); s.append(u); return s; };
+      const h = (t, c = "", ...k) => { const e = document.createElement(t); if (c) e.className = c; e.append(...k); return e; };
+      const li = (i, t) => h("li", "", icon(i), t);
+      const wa = t => `https://wa.me/${CONFIG.WA}?text=${encodeURIComponent(t)}`;
+      const debounce = (f, ms) => { let t; return (...a) => { clearTimeout(t); t = setTimeout(() => f(...a), ms); }; };
+      const priceOf = s => (s.price == null ? "Por cotizar" : MXN(s.price));
+      const cache = new Map(), dlg = $("#dlg"), res = $("#res"), frm = $("#frm");
+      const searchResultsSection = $("#searchResultsSection"), searchResults = $("#searchResults");
+      const remember = l => l.forEach(s => cache.set(s.id, s));
+
+      
+      function card(s) {
+    const b = h("button", "btn");
+    b.type = "button";
+    b.dataset.add = s.id;
+
+    const details = [];
+
+    if (s.description) details.push(li("check", s.description));
+    if (s.resultsIn) details.push(li("clock", "Resultados en " + s.resultsIn));
+
+    const priceBlock = h("div", "price-block");
+    const priceLine = h("div", "price-line");
+
+    // Precio anterior: únicamente cuando hay promoción
+    if (s.promo && s.price != null) {
+        const regular = Math.round((s.price / 0.70) * 100) / 100;
+        priceLine.append(
+            h("span", "price-regular", MXN(regular))
+        );
+    }
+
+    // Precio actual: siempre alineado a la derecha
+    const currentPrice = h("div", "current-price");
+
+    currentPrice.append(
+        h("span", "price-caption", "Precio"),
+        h("div", "pr", priceOf(s))
+    );
+
+    priceLine.append(currentPrice);
+    priceBlock.append(priceLine);
+
+    // Etiqueta de oferta
+    if (s.promo && s.price != null) {
+        priceBlock.append(
+            h("span", "price-offer", "Oferta")
+        );
+    }
+
+    return h(
+        "article",
+        "es",
+        h("h3", "", s.name),
+        ...(details.length ? [h("ul", "", ...details)] : []),
+        priceBlock,
+        b
+    );
+}
+
+
+      async function loadFeatured() {
+        const box = $("#top");
+        box.replaceChildren(...[1, 2, 3, 4].map(() => h("div", "es skel")));
+        try { const l = await api.getFeatured(); remember(l); box.replaceChildren(...l.map(card)); refresh(); }
+        catch { const b = h("button", "retry", "Reintentar"); b.type = "button"; b.onclick = loadFeatured; box.replaceChildren(h("p", "emp", "No pudimos cargar los estudios. ", b)); }
+      }
+
+      let ctl;
+      let searchAutoScrolled = false;
+
+      function scrollToSearchArea() {
+        const target = searchResultsSection;
+        const header = document.querySelector("header");
+        if (!target || target.hidden) return;
+
+        const headerHeight = header ? header.getBoundingClientRect().height : 0;
+        const targetTop = window.scrollY + target.getBoundingClientRect().top - headerHeight - 14;
+        window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+      }
+
+      /*const searchInput = $("#q");
+      const clearSearch = $("#clearSearch");
+      const syncClearButton = () => { clearSearch.hidden = !searchInput.value.length; };
+      searchInput.addEventListener("input", syncClearButton);
+      clearSearch.addEventListener("click", () => {
+        searchInput.value = "";
+        syncClearButton();
+        ctl?.abort();
+        searchAutoScrolled = false;
+        searchResultsSection.hidden = true;
+        searchResults.replaceChildren();
+        res.hidden = true;
+        searchInput.focus();
+      });*/
+
+      $("#q").addEventListener("input", debounce(async () => {
+        const q = $("#q").value.trim(); ctl?.abort();
+        if (q.length < 3) {
+          searchAutoScrolled = false;
+          searchResultsSection.hidden = true;
+          searchResults.replaceChildren();
+          res.hidden = true;
+          return;
+        }
+        const mine = ctl = new AbortController();
+        searchResultsSection.hidden = false;
+        searchResults.replaceChildren(h("p", "emp", "Buscando estudios..."));
+        try {
+          const l = await api.searchStudies(q, mine.signal); if (mine.signal.aborted) return;
+          remember(l);
+          if (l.length) {
+            searchResults.replaceChildren(...l.map(card));
+            $("#searchResultsCaption").textContent = `${l.length} estudio(s) encontrado(s). Selecciona los que deseas agregar a tu cotización.`;
+            if (!searchAutoScrolled) {
+              searchAutoScrolled = true;
+              requestAnimationFrame(() => requestAnimationFrame(scrollToSearchArea));
+            }
+          } else {
+            searchResults.replaceChildren(h("p", "emp", "No encontramos estudios con ese nombre. Intenta con otra palabra o envíanos tu orden por WhatsApp."));
+            $("#searchResultsCaption").textContent = "No hay coincidencias para tu búsqueda.";
+          }
+          res.hidden = true;
+          refresh();
+        } catch (e) {
+          if (!mine.signal.aborted) {
+            searchResults.replaceChildren(h("p", "emp", "No pudimos buscar ahora. Intenta de nuevo."));
+            $("#searchResultsCaption").textContent = "Ocurrió un problema al consultar los estudios.";
+          }
+        }
+      }, 250));
+
+      function refresh() {
+        const n = cart.ids.length, bd = $("#badge"); bd.textContent = n; bd.hidden = !n;
+        document.querySelectorAll("[data-add]").forEach(b => {
+          const on = cart.has(b.dataset.add);
+          b.classList.toggle("on", on);
+          if (b.classList.contains("study-option")) {
+            b.setAttribute("aria-selected", on ? "true" : "false");
+            const mark = b.querySelector(".study-check");
+            if (on && !mark) b.append(h("span", "study-check", "✓"));
+            if (!on && mark) mark.remove();
+          } else {
+            b.replaceChildren(icon(on ? "check" : "cart"), on ? "Agregado" : "Agregar");
+          }
+        });
+        const items = cart.ids.map(i => cache.get(i)).filter(Boolean);
+        $("#dl").replaceChildren(...(items.length ? items.map(s => {
+          const row = h("div", "dl-item");
+          const name = h("span", "dl-item-name", s.name);
+          const actions = h("span", "dl-item-actions");
+          const price = h("span", "dl-item-price", priceOf(s));
+          const remove = h("button", "", "Quitar");
+          remove.type = "button";
+          remove.dataset.rm = s.id;
+          remove.setAttribute("aria-label", `Quitar ${s.name} de la cotización`);
+          actions.append(price, remove);
+          row.append(name, actions);
+          return row;
+        }) : [h("p", "emp", "Aún no agregas estudios. Usa el buscador para encontrarlos.")]));
+        const subtotal = Math.round(items.reduce((a, s) => a + (Number(s.price) || 0), 0) * 100) / 100;
+        const domicilio = items.length && subtotal < 1000 ? 200 : 0;
+        // Misma regla del bot: IVA 16% sobre subtotal + domicilio.
+        const baseIva = Math.round((subtotal + domicilio) * 100) / 100;
+        const iva = Math.round((baseIva * 0.16 + Number.EPSILON) * 100) / 100;
+        const total = Math.round((baseIva + iva + Number.EPSILON) * 100) / 100;
+        const money = n => "$" + n.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " MXN";
+        $("#subtotal").textContent = money(subtotal);
+        $("#domicilio").textContent = money(domicilio);
+        $("#iva").textContent = money(iva);
+        $("#tot").textContent = money(total);
+        $("#nota").textContent = (items.some(s => s.price == null) ? "Algunos estudios requieren cotización manual. " : "") + (domicilio ? "" : "");
+        $("#wl").href = wa(items.length ? "Hola HomeliCare, quiero cotizar estos estudios a domicilio:\n" + items.map(s => "• " + s.name).join("\n") : "Hola HomeliCare, quiero cotizar estudios a domicilio.");
+      }
+      async function rehydrate() { // IDs guardados de una visita anterior: se vuelven a pedir al servidor
+        const miss = cart.ids.filter(i => !cache.has(i)); if (!miss.length) return;
+        try { remember(await api.getStudiesByIds(miss)); cart.ids.filter(i => !cache.has(i)).forEach(i => cart.remove(i)); } catch { }
+        refresh();
+      }
+
+      const minDate = (() => { const d = new Date(); d.setDate(d.getDate() + 1); return d.toLocaleDateString("sv"); })();
+      frm.fecha.min = minDate;
+      let horariosDisponibles = [];
+      frm.franja.disabled = true;
+      frm.fecha.addEventListener("change", async () => {
+        frm.franja.replaceChildren(new Option("Consultando horarios...", ""));
+        frm.franja.disabled = true;
+        horariosDisponibles = [];
+        try {
+          horariosDisponibles = await api.consultarHorarios(frm.fecha.value);
+          frm.franja.replaceChildren(new Option(horariosDisponibles.length ? "Elige horario" : "Sin horarios disponibles", ""));
+          horariosDisponibles.forEach((x, i) => frm.franja.append(new Option(`${x.HoraInicio} a ${x.HoraFin}`, String(i))));
+          frm.franja.disabled = !horariosDisponibles.length;
+        } catch (e) {
+          horariosDisponibles = [];
+          frm.franja.replaceChildren(new Option("No fue posible consultar horarios", ""));
+          const er = $("#err"); er.textContent = e.message; er.hidden = false;
+        }
+      });
+      const phone = v => String(v).replace(/\D/g, "").replace(/^52/, "");
+      let currentStep = 1;
+      const stepPanels = [...document.querySelectorAll("[data-step-panel]")];
+      const stepIndicators = [...document.querySelectorAll("[data-step-indicator]")];
+      const showStep = n => {
+        currentStep = Math.max(1, Math.min(3, n));
+        stepPanels.forEach(p => { const active = Number(p.dataset.stepPanel) === currentStep; p.hidden = !active; p.classList.toggle("active", active); });
+        stepIndicators.forEach(el => {
+          const index = Number(el.dataset.stepIndicator);
+          el.classList.toggle("active", index === currentStep);
+          el.classList.toggle("done", index < currentStep);
+        });
+        $("#stepBack").hidden = currentStep === 1;
+        $("#stepNext").hidden = currentStep === 3;
+        $("#send").hidden = currentStep !== 3;
+        $("#dt").textContent = currentStep === 1 ? "Tu cotización" : currentStep === 2 ? "Tus datos" : "Agenda tu servicio";
+        $("#err").hidden = true;
+        if (currentStep === 3) {
+          const dateText = frm.fecha.value ? new Date(frm.fecha.value + "T12:00:00").toLocaleDateString("es-MX") : "Por elegir";
+          const slot = frm.franja.selectedIndex > 0 ? frm.franja.options[frm.franja.selectedIndex].text : "Por elegir";
+          $("#bookingFinalSummary").textContent = `Fecha: ${dateText} · Horario: ${slot} · Total: ${$("#tot").textContent}`;
+        }
+      };
+      const validateStep = n => {
+        const d = Object.fromEntries(new FormData(frm));
+        if (n === 1) {
+          if (!cart.ids.length) return "Agrega al menos un estudio antes de continuar.";
+          if (cart.ids.some(id => !cache.has(id) || cache.get(id).price == null)) return "Hay estudios sin precio confirmado. Retíralos o solicita cotización por WhatsApp.";
+        }
+        if (n === 2) {
+          if ((d.nombre || "").trim().length < 3) return "Escribe tu nombre completo.";
+          if (phone(d.tel).length !== 10) return "Escribe tu WhatsApp a 10 dígitos.";
+          if ((d.dir || "").trim().length < 8) return "Escribe tu dirección y colonia.";
+          if (!d.latitud || !d.longitud) return "Selecciona una dirección de las sugerencias para validar su ubicación.";
+        }
+        if (n === 3) {
+          if (!d.fecha || d.fecha < minDate) return "Elige una fecha a partir de mañana.";
+          if (!d.franja || !horariosDisponibles[Number(d.franja)]) return "Elige un horario disponible para la fecha seleccionada.";
+          if (!d.ok) return "Debes aceptar el aviso de privacidad.";
+        }
+        return "";
+      };
+      $("#stepNext").addEventListener("click", () => {
+        const message = validateStep(currentStep);
+        if (message) { $("#err").textContent = message; $("#err").hidden = false; return; }
+        showStep(currentStep + 1);
+      });
+      $("#stepBack").addEventListener("click", () => showStep(currentStep - 1));
+
+      function validate(d) { // Validación de UX. El servidor DEBE repetirla: nunca confíes en el cliente.
+        if (!cart.ids.length) return "Agrega al menos un estudio.";
+        if ((d.nombre || "").trim().length < 3) return "Escribe tu nombre completo.";
+        if (phone(d.tel).length !== 10) return "Escribe tu WhatsApp a 10 dígitos.";
+        if ((d.dir || "").trim().length < 8) return "Escribe tu dirección y colonia.";
+        if (!d.latitud || !d.longitud) return "Selecciona una dirección de las sugerencias para validar su ubicación.";
+        if (!d.fecha || d.fecha < minDate) return "Elige una fecha a partir de mañana.";
+        if (!d.franja || !horariosDisponibles[Number(d.franja)]) return "Elige un horario disponible para la fecha seleccionada.";
+        if (!d.ok) return "Debes aceptar el aviso de privacidad.";
+        return "";
+      }
+      frm.addEventListener("submit", async e => {
+        e.preventDefault();
+        const d = Object.fromEntries(new FormData(frm)), err = $("#err"), ok = $("#ok"), btn = $("#send");
+        err.hidden = ok.hidden = true;
+        if (d.web) return; // honeypot: los bots lo llenan
+        const m = validate(d); if (m) { err.textContent = m; err.hidden = false; return; }
+        btn.disabled = true;
+        try {
+          const r = await api.createAppointment({
+            patient: { name: d.nombre.trim(), phone: "+52" + phone(d.tel) },
+            address: { fullAddress: d.dir.trim(), street: d.calle, streetNumber: d.numero, neighborhood: d.colonia, city: d.municipio, state: d.estado, postalCode: d.cp, country: d.pais, latitude: Number(d.latitud), longitude: Number(d.longitud) },
+            date: d.fecha, slot: horariosDisponibles[Number(d.franja)], studyIds: cart.ids,
+            studies: cart.ids.map(id => cache.get(id)).filter(Boolean),
+            consent: { privacyNotice: true, acceptedAt: new Date().toISOString() }
+          });
+          cart.clear(); frm.reset();
+          horariosDisponibles = [];
+          frm.franja.replaceChildren(new Option("Elige una fecha primero", ""));
+          frm.franja.disabled = true;
+          window.HomeliAddress?.reset?.();
+          ok.textContent = `¡Solicitud registrada! Folio: ${r.id}. Total: ${MXN(r.total)}. Te contactaremos por WhatsApp.`; ok.hidden = false;
+        } catch (x) {
+          err.textContent = x.message || "No pudimos registrar tu solicitud. Intenta nuevamente.";
+          err.hidden = false;
+        } finally { btn.disabled = false; }
+      });
+
+      document.addEventListener("click", e => {
+        const a = e.target.closest("[data-add]");
+        if (a && cache.has(a.dataset.add)) cart.has(a.dataset.add) ? cart.remove(a.dataset.add) : cart.add(a.dataset.add);
+        const r = e.target.closest("[data-rm]");
+        if (r) {
+          const study = cache.get(r.dataset.rm);
+          const name = study?.name || "este estudio";
+          if (window.confirm(`¿Estás seguro de que deseas quitar "${name}" de tu cotización?`)) {
+            cart.remove(r.dataset.rm);
+          }
+        }
+        if (!e.target.closest(".sb")) res.hidden = true;
+      });
+      const open = () => { $("#ok").hidden = true; $("#err").hidden = true; showStep(1); refresh(); dlg.showModal(); window.HomeliAddress?.init(); };
+      $("#cot").onclick = () => {
+        const term = $("#q").value.trim();
+        if (term.length < 3) {
+          $("#q").focus();
+          $("#searchResultsCaption").textContent = "Escribe al menos 3 caracteres para buscar un estudio.";
+          return;
+        }
+        if (!searchResultsSection.hidden) {
+          scrollToSearchArea();
+        } else {
+          $("#q").dispatchEvent(new Event("input", { bubbles: true }));
+        }
+      };
+      $("#cartBtn").onclick = open;
+      $("#agendar").addEventListener("click", e => { e.preventDefault(); open(); });
+      $("#x").onclick = () => dlg.close();
+      $("#orden").href = wa("Hola HomeliCare, Necesito ayuda para cotizar mis estudios.");
+      $("#tel").href = wa("Hola HomeliCare, Quiero más información.");
+      // Apariencia: inicia en claro y conserva la elección manual del usuario.
+      const themeToggle = $("#themeToggle");
+
+const applyTheme = theme => {
+    document.documentElement.dataset.theme = theme;
+    themeToggle.checked = theme === "dark";
+
+    try {
+        localStorage.setItem("hc.theme", theme);
+    } catch { }
+
+    const logo = document.getElementById("logoHomeliCare");
+
+    if (logo) {
+        logo.src = theme === "dark"
+            ? "img/HomeliCare_modo_oscuro.png"
+            : "img/HomeliCare_modo_claro.png";
+    }
+};
+
+let savedTheme = "light";
+
+try {
+    savedTheme = localStorage.getItem("hc.theme") === "dark"
+        ? "dark"
+        : "light";
+} catch { }
+
+applyTheme(savedTheme);
+
+themeToggle.addEventListener("change", () => {
+    applyTheme(themeToggle.checked ? "dark" : "light");
+});
+
+       
+
+      cart.subscribe(refresh);
+      loadFeatured().then(rehydrate);
+
+      // Menú de navegación en celular y tablet
+      const hdr = document.querySelector("header"), bg = $("#burger");
+      const menu = on => { hdr.classList.toggle("open", on); bg.setAttribute("aria-expanded", on); bg.setAttribute("aria-label", on ? "Cerrar menú" : "Abrir menú"); bg.querySelector("use").setAttribute("href", on ? "#i-close" : "#i-menu"); };
+      bg.onclick = () => menu(!hdr.classList.contains("open"));
+      $("#menu").addEventListener("click", e => { if (e.target.closest("a") && e.target.id !== "agendar2") menu(false); });
+      document.addEventListener("keydown", e => { if (e.key === "Escape") menu(false); });
+      $("#agendar2").addEventListener("click", e => { e.preventDefault(); menu(false); open(); });
+
+    })();
+
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const menuLinks = document.querySelectorAll(
+        '.nav-links a[href^="#"]'
+    );
+
+    const sections = [...menuLinks]
+        .map(link => document.querySelector(link.getAttribute("href")))
+        .filter(section => section !== null);
+
+    // Marcar elemento activo
+    function activarMenu(id) {
+        menuLinks.forEach(link => {
+            const activo = link.getAttribute("href") === `#${id}`;
+
+            link.classList.toggle("active", activo);
+            if (activo) {
+                link.setAttribute("aria-current", "page");
+            } else {
+                link.removeAttribute("aria-current");
+            }
+        });
+    }
+
+    // Navegación sin modificar la URL
+    menuLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+
+            e.preventDefault();
+
+            const id = this.getAttribute("href").substring(1);
+            const section = document.getElementById(id);
+
+            if (!section) return;
+
+            activarMenu(id);
+
+            section.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+            });
+
+            // Eliminar cualquier hash de la URL
+            history.replaceState(
+                null,
+                "",
+                window.location.pathname + window.location.search
+            );
+        });
+    });
+
+    // Detectar sección visible al desplazarse
+    const observer = new IntersectionObserver(entries => {
+
+        const visible = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) =>
+                b.intersectionRatio - a.intersectionRatio
+            );
+
+        if (visible.length > 0) {
+            activarMenu(visible[0].target.id);
+        }
+
+    }, {
+        rootMargin: "-20% 0px -65% 0px",
+        threshold: [0, 0.1, 0.3, 0.5, 0.7]
+    });
+
+    sections.forEach(section => observer.observe(section));
+
+    // Estado inicial
+    const hash = window.location.hash;
+    const initialSection = hash
+        ? document.querySelector(hash)
+        : document.getElementById("inicio");
+
+    if (initialSection) {
+        activarMenu(initialSection.id);
+    }
+
+    // Limpiar hash inicial si existe
+    if (hash) {
+        history.replaceState(
+            null,
+            "",
+            window.location.pathname + window.location.search
+        );
+    }
+
+});
+
+  </script>
+</body>
+
+</html>
